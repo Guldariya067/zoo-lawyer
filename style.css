@@ -1,0 +1,47 @@
+:root{--p:#123D35;--a:#8DD8B5;--bg:#F7F9F6;--t:#17211E;--b:#F0EDE5;--card:#fff;--r:18px}
+[data-theme=dark]{--bg:#0e1a17;--t:#e9f2ee;--b:#16251f;--card:#1a2b25}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font:16px/1.6 -apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--t);overflow-x:hidden}
+.top{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:var(--p);color:#fff}
+.logo{color:#fff;text-decoration:none;font-weight:600}.logo b{color:var(--a)}
+nav{display:flex;gap:6px;align-items:center}nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:10px;transition:.2s}
+nav a:hover,nav a.on{background:rgba(141,216,181,.25);color:var(--a)}
+#burger{display:none}button{font:inherit;cursor:pointer}
+#theme,#burger{background:none;border:0;color:#fff;font-size:20px;min-width:44px;min-height:44px}
+section{max-width:1100px;margin:auto;padding:56px 5vw}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.hero svg{width:100%;height:auto}
+h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:.2em 0;color:var(--p)}[data-theme=dark] h1{color:var(--a)}
+.eyebrow{color:var(--p);font-weight:600}.lead{font-size:1.15rem}.muted{opacity:.7}
+.row{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:12px;background:var(--p);color:#fff;border:2px solid var(--p);text-decoration:none;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(18,61,53,.25)}
+.btn.ghost{background:transparent;color:var(--p)}[data-theme=dark] .btn.ghost{color:var(--a);border-color:var(--a)}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1100px;margin:auto;padding:0 5vw}
+.cards2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card,.wiz,details,.res{background:var(--card);border-radius:var(--r);box-shadow:0 4px 20px rgba(0,0,0,.06);padding:20px;transition:.2s}
+.card:hover{transform:translateY(-3px)}
+.card a{color:var(--p);font-weight:600}[data-theme=dark] .card a{color:var(--a)}
+.wiz{padding:28px;background:var(--b);min-height:260px}
+.bar{height:8px;background:rgba(0,0,0,.1);border-radius:8px;overflow:hidden;margin-bottom:18px}.bar i{display:block;height:100%;background:var(--p);transition:width .4s}
+.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:14px 16px;border:2px solid transparent;border-radius:12px;background:var(--card);color:var(--t);min-height:48px}
+.opt:hover,.opt.sel{border-color:var(--p);background:var(--a);color:#123D35}
+.err{color:#b3261e;font-weight:600;min-height:1.4em}
+input[type=number],input[type=search]{width:100%;padding:12px;border-radius:12px;border:2px solid var(--a);background:var(--card);color:var(--t);font:inherit}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;background:var(--a);color:#123D35;font-size:.85rem}
+.status{font-size:1.3rem;font-weight:700;padding:12px 16px;border-radius:12px;margin-bottom:12px}
+.s0{background:#d8f3e5;color:#0b4a2f}.s1{background:#fff3cd;color:#664d03}.s2{background:#fde0dc;color:#8c1d18}.s3{background:#e2e8f0;color:#1e293b}
+.warn{border-left:4px solid #e0a800;padding:8px 12px;background:rgba(224,168,0,.12);border-radius:8px}
+details{margin:10px 0}summary{cursor:pointer;font-weight:600;min-height:32px}
+a{color:var(--p)}[data-theme=dark] a{color:var(--a)}
+footer{background:var(--p);color:#fff;padding:28px 5vw;text-align:center}
+.fade{animation:f .4s}@keyframes f{from{opacity:0;transform:translateY(8px)}}
+@media(max-width:800px){
+ #burger{display:block}
+ nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:var(--p);padding:10px 5vw 16px}
+ nav.open{display:flex}nav a{min-height:44px;display:flex;align-items:center}
+ .hero,.cards3,.cards2{grid-template-columns:1fr}.cards3{gap:12px}section{padding:40px 5vw}
+}
+@media print{.top,footer,.row,.noprint{display:none!important}body{background:#fff;color:#000}}
+
+.top{padding-top:calc(12px + env(safe-area-inset-top,0px))}footer{padding-bottom:calc(28px + env(safe-area-inset-bottom,0px))}

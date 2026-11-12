@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ЗОО-ЮРИСТ KZ — Знай права. Заботься о питомце</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#home">🐾 ЗОО-ЮРИСТ <b>KZ</b></a>
+  <button id="burger" aria-label="Меню" aria-expanded="false">☰</button>
+  <nav id="nav">
+    <a href="#home">Главная</a><a href="#helper">Помощник</a><a href="#rules">Правила</a><a href="#cases">Ситуации</a><a href="#sources">Источники</a>
+    <button id="theme" aria-label="Тема">◐</button>
+  </nav>
+</header>
+<main>
+<section id="home" class="hero">
+  <div>
+    <p class="eyebrow">Знай права. Заботься о питомце.</p>
+    <h1>Ваш питомец. Ваши права. Наш гид.</h1>
+    <p class="lead">Разбирайтесь в правилах содержания домашних животных в Казахстане с помощью интерактивного правового помощника.</p>
+    <div class="row"><a class="btn" href="#helper">Проверить ситуацию</a><a class="btn ghost" href="#rules">Изучить правила</a></div>
+  </div>
+  <svg viewBox="0 0 320 220" role="img" aria-label="Собака и кошка">
+    <ellipse cx="160" cy="200" rx="140" ry="12" fill="#8DD8B5" opacity=".4"/>
+    <g fill="#123D35"><ellipse cx="105" cy="140" rx="55" ry="45"/><circle cx="105" cy="82" r="34"/><path d="M78 64 L68 20 L100 50Z M132 64 L142 20 L110 50Z" fill="#17211E"/><rect x="72" y="170" width="16" height="30" rx="7"/><rect x="122" y="170" width="16" height="30" rx="7"/></g>
+    <circle cx="94" cy="80" r="4" fill="#fff"/><circle cx="116" cy="80" r="4" fill="#fff"/><ellipse cx="105" cy="94" rx="7" ry="5" fill="#8DD8B5"/>
+    <g fill="#8DD8B5"><ellipse cx="225" cy="150" rx="40" ry="38"/><circle cx="225" cy="98" r="28"/><path d="M203 85 L198 55 L218 74Z M247 85 L252 55 L232 74Z"/><path d="M262 160 Q300 150 292 112" stroke="#8DD8B5" stroke-width="10" fill="none" stroke-linecap="round"/></g>
+    <circle cx="215" cy="96" r="3.5" fill="#123D35"/><circle cx="235" cy="96" r="3.5" fill="#123D35"/>
+  </svg>
+</section>
+<section class="cards3">
+  <article class="card"><h3>🏠 Правила содержания</h3><p>Что нужно учитывать владельцу дома и в квартире.</p><a href="#rules">Подробнее →</a></article>
+  <article class="card"><h3>🦮 Правила выгула</h3><p>Где и как выгуливать собаку. Зависит от места и региона.</p><a href="#helper" data-sc="walk">Проверить →</a></article>
+  <article class="card"><h3>🤝 Споры с соседями</h3><p>Шум, жалобы, КСК и ОСИ: порядок действий.</p><a href="#helper" data-sc="neighbors">Проверить →</a></article>
+</section>
+
+<section id="helper">
+  <h2>Интерактивный ЗОО-помощник</h2>
+  <p class="muted">Ответы хранятся только в памяти этой страницы и никуда не отправляются. Личные данные вводить не нужно.</p>
+  <div class="wiz" id="wiz"></div>
+</section>
+
+<section id="rules">
+  <h2>Правила и законодательство</h2>
+  <input id="q" type="search" placeholder="Поиск по справочнику…" aria-label="Поиск">
+  <div id="ruleList"></div>
+</section>
+
+<section id="cases">
+  <h2>Жизненные ситуации</h2>
+  <p class="muted">Все истории вымышлены.</p>
+  <div class="row" id="filters"></div>
+  <div class="cards2" id="caseList"></div>
+</section>
+
+<section id="sources">
+  <h2>Источники и о проекте</h2>
+  <p>ЗОО-ЮРИСТ KZ — учебный проект по дисциплине «Вайбкодинг» (КМ2). Цель — дать общую справочную информацию владельцам кошек и собак. Это не официальный государственный сервис и не юридическая консультация.</p>
+  <p><b>Дата последней ручной проверки:</b> <span id="checked"></span></p>
+  <div id="srcList"></div>
+  <h3>Ограничения сервиса</h3>
+  <ul><li>Сервис не выдаёт индивидуальных юридических заключений.</li><li>Региональные правила выгула и содержания могут отличаться — проверяйте их в своём регионе.</li><li>Непроверенные нормы помечены предупреждением.</li></ul>
+  <h3>FAQ</h3>
+  <details><summary>Сайт собирает мои данные?</summary><p>Нет. Ответы остаются в памяти страницы и пропадают при её закрытии.</p></details>
+  <details><summary>Можно ли считать результат решением юриста?</summary><p>Нет. Это справочная подсказка, где искать норму и что проверить.</p></details>
+  <details><summary>Почему нет размеров штрафов?</summary><p>Они показываются только после ручной проверки по adilet.zan.kz.</p></details>
+</section>
+</main>
+<footer>
+<!-- ВРЕМЕННАЯ оговорка своими словами: замените на ДОСЛОВНЫЙ текст преподавателя -->
+  <p id="disclaimer">Сайт носит образовательный характер и содержит только общую справочную информацию. Он не является официальным государственным ресурсом и не заменяет консультацию юриста. Нормы и размеры ответственности проверяйте в актуальной редакции на adilet.zan.kz. <a href="disclaimer.html" style="color:#8DD8B5">Правовая оговорка →</a></p>
+  <p class="muted">© ЗОО-ЮРИСТ KZ · учебный проект</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
